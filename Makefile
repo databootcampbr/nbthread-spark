@@ -3,7 +3,7 @@
 ROOT_PATH=$(shell pwd)
 
 install:
-	@pip install -e .
+	@pip install --process-dependency-links -e .
 
 clean:
 	-@rm -rf $(ROOT_PATH)/*.egg-info
