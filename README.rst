@@ -1,19 +1,19 @@
 NBThread Spark
-==============
+##############
 
 Spark Streaming multithread in IPython Notebooks.
 
 It's now simple to execute Spark Structured Streaming in Jupyter Notebooks
 
 Install
--------
+=======
 
 .. code:: shell
 
     pip install nbthread_spark --process-dependency-links
 
 Usage
------
+=====
 
 Given a Socket Stream:
 
@@ -73,7 +73,7 @@ You can run queries using this:
 
 
 Special Thanks
---------------
+==============
 
 Here_ the list of students that contribute with this module.
 
