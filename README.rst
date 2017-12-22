@@ -8,12 +8,16 @@ It's now simple to execute Spark Structured Streaming in Jupyter Notebooks
 Install
 -------
 
+.. code:: shell
+
     pip install nbthread_spark --process-dependency-links
 
 Usage
 -----
 
 Given a Socket Stream:
+
+.. code:: python
 
     TCP_IP = "localhost"
     TCP_PORT = 9005
@@ -52,6 +56,8 @@ Given a Socket Stream:
 
 You can run queries using this:
 
+.. code:: python
+
     from nbthread_spark.stream import StreamRunner
 
     runner = StreamRunner(query)
@@ -69,6 +75,6 @@ You can run queries using this:
 Special Thanks
 --------------
 
-[Here](https://github.com/micahscopes/nbmultitask/blob/master/CONTRIBUTORS.md) the list of students that contribute with this module.
+Here_ the list of students that contribute with this module.
 
-    
+.. _Here: https://github.com/databootcampbr/nbthread-spark/blob/master/CONTRIBUTORS.md    
