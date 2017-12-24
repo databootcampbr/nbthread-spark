@@ -14,7 +14,11 @@ class StreamRunner():
             use_terminate=True,
             **kwargs
         )
-        self.thread.terminate = self.query.stop
+        self.thread.terminate = self.stop_thread
+
+    def stop_thread(self):
+        self.query.stop()
+        self.log_thread.stop()
 
     def stop_log(self):
         self.log_running = False
@@ -40,9 +44,7 @@ class StreamRunner():
         self.thread.start()
     
     def stop(self):
-        self.query.stop()        
         self.thread.stop()
-        self.log_thread.stop()
     
     def status(self):
         return self.query.status
