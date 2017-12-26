@@ -15,6 +15,18 @@ Install
 Usage
 =====
 
+Show Spark Buttons for stop and UI:
+
+.. code:: python
+
+    from nbthread_spark.spark import SparkRunner
+
+    spark = SparkRunner.builder.getOrCreate() # same as original SparkSession
+
+    ## you will see buttons ;)
+
+
+
 Given a Socket Stream:
 
 .. code:: python
