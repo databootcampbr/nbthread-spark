@@ -1,7 +1,7 @@
 NBThread Spark
 ##############
 
-Spark Streaming multithread in IPython Notebooks.
+Spark multithread in IPython Notebooks.
 
 It's now simple to execute Spark Structured Streaming in Jupyter Notebooks
 
@@ -71,6 +71,24 @@ You can run queries using this:
 
     runner.stop() # stop streaming and thread
 
+For Stream Manager you can control lot of streams in a easy way:
+
+.. code:: python
+
+    from nbthread_spark.manager import StreamManager
+
+    sm = StreamManager()
+
+    sm.append(runner)
+    sm.append(runner1)
+    sm.append(runner2)
+
+    sm.all_controls()
+    ## you will see all buttons from streams ;)
+
+    sm.start_all() # start all streams
+
+    sm.stop_all() # stop all streams
 
 Special Thanks
 ==============

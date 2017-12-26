@@ -1,5 +1,6 @@
 
 import ipywidgets as widgets
+from IPython.display import display
 
 class StreamManager(list):
     
@@ -13,7 +14,7 @@ class StreamManager(list):
     
     def all_controls(self):
         for stream in self:
-            widgets.HTML(
+            display(widgets.HTML(
                 value="<h3>%s</h3>" % stream.name
-            )
+            ))
             stream.controls()
